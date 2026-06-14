@@ -6,7 +6,7 @@ using UnityEngine;
 namespace TW.ReferenceObjects
 {
 	[GeneratePropertyBag]
-	public abstract class ReferenceBase<T> : ScriptableObject
+	public abstract partial class ReferenceBase<T> : ScriptableObject
 	{
 		[SerializeField] protected T _defaultValue;
 

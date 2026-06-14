@@ -4,7 +4,7 @@ namespace TW.ReferenceObjects
 {
 
 	[CreateAssetMenu(menuName = "Data/Reference/Bool"), GeneratePropertyBag]
-	public class ReferenceBool : ReferenceBase<bool>
+	public partial class ReferenceBool : ReferenceBase<bool>
 	{
 		[CreateProperty]
 		public bool BindBoolValue => _value;
