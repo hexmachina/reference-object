@@ -1,9 +1,11 @@
 using System;
+using Unity.Properties;
 using UnityEngine;
 
 
 namespace TW.ReferenceObjects
 {
+	[GeneratePropertyBag]
 	public abstract class ReferenceBase<T> : ScriptableObject
 	{
 		[SerializeField] protected T _defaultValue;
@@ -16,6 +18,7 @@ namespace TW.ReferenceObjects
 
 		public bool IsInitialized => _isInitialized;
 
+		[CreateProperty]
 		public T Value
 		{
 			get
