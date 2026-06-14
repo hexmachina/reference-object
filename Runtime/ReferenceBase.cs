@@ -38,6 +38,9 @@ namespace TW.ReferenceObjects
 			}
 		}
 
+		[CreateProperty]
+		public T BindValue => _value;
+
 		public event Action<T> OnValueChanged;
 
 		protected virtual void Initialize()
