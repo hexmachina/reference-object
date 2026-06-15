@@ -8,6 +8,8 @@ namespace TW.ReferenceObjects
 	{
 		[CreateProperty]
 		public bool BindBoolValue => _value;
+		[CreateProperty]
+		public bool Sample { get; set; }
 		public void Toggle()
 		{
 			Value = !Value;
