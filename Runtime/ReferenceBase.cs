@@ -19,7 +19,7 @@ namespace TW.ReferenceObjects
 
 		public bool IsInitialized => _isInitialized;
 
-		[CreateProperty]
+		[field: SerializeField, CreateProperty]
 		public T Value
 		{
 			get
@@ -39,7 +39,7 @@ namespace TW.ReferenceObjects
 			}
 		}
 
-		[CreateProperty]
+		[field: SerializeField, CreateProperty]
 		public T BindValue => _value;
 
 		public event Action<T> OnValueChanged;

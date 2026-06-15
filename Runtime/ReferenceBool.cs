@@ -6,9 +6,13 @@ namespace TW.ReferenceObjects
 	[CreateAssetMenu(menuName = "Data/Reference/Bool"), GeneratePropertyBag]
 	public partial class ReferenceBool : ReferenceBase<bool>
 	{
-		[CreateProperty]
-		public bool BindBoolValue => _value;
-		[CreateProperty]
+		[field: SerializeField, CreateProperty]
+		public bool BindBoolValue
+		{
+			get;
+			set;
+		}
+		[field: SerializeField, CreateProperty]
 		public bool Sample { get; set; }
 		public void Toggle()
 		{
