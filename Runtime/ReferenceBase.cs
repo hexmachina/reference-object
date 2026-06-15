@@ -19,7 +19,7 @@ namespace TW.ReferenceObjects
 
 		public bool IsInitialized => _isInitialized;
 
-		[field: SerializeField, CreateProperty, HideInInspector]
+		[CreateProperty]
 		public T Value
 		{
 			get
