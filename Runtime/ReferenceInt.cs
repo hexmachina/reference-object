@@ -1,10 +1,11 @@
+using Unity.Properties;
 using UnityEngine;
 
 namespace TW.ReferenceObjects
 {
 
-	[CreateAssetMenu(menuName = "Data/Reference/Int")]
-	public class ReferenceInt : ReferenceIntBase
+	[CreateAssetMenu(menuName = "Data/Reference/Int"), GeneratePropertyBag]
+	public partial class ReferenceInt : ReferenceIntBase
 	{
 		public virtual void Increment()
 		{
@@ -23,6 +24,11 @@ namespace TW.ReferenceObjects
 				Value--;
 			}
 		}
+
+		[CreateProperty]
+		public bool IsPositive => Value >= 0;
+		[CreateProperty]
+		public bool IsNegative => Value < 0;
 	}
 
 	public abstract class ReferenceIntBase : ReferenceBase<int>
