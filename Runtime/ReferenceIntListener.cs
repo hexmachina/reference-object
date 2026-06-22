@@ -8,6 +8,7 @@ namespace TW.ReferenceObjects
 		[SerializeField] private ReferenceIntBase m_ReferenceInt;
 		[SerializeField] private bool _notifyOnEnable = true;
 		public UnityEvent<int> onValueChanged = new();
+		public UnityEvent<bool> onValueChangeIsDefault = new();
 		public UnityEvent<bool> onNonDefaultChanged = new();
 		public UnityEvent<string> onValueChangedString = new();
 
@@ -36,6 +37,7 @@ namespace TW.ReferenceObjects
 			onValueChanged.Invoke(obj);
 			onValueChangedString.Invoke(obj.ToString());
 			onNonDefaultChanged.Invoke(obj != m_ReferenceInt.defaultValue);
+			onValueChangeIsDefault.Invoke(obj == m_ReferenceInt.defaultValue);
 		}
 
 		private void OnDisable()

@@ -1,6 +1,6 @@
 {
     "name": "com.tw.reference-object",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "unity": "6000.0",
     "displayName": "Reference Object",
     "description": "Scriptable object listener package",
